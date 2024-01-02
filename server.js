@@ -6,7 +6,7 @@ const { authenticateUser } = require('./middlewares/authMiddleware');
 const db = require('./db/db');
 const { sequelize } = require('./config/database'); // Import Sequelize instance
 
-// Enable CORS for all routes
+// Enable CORS for all routess
 app.use(cors());
 
 // Import individual routers and controllers
