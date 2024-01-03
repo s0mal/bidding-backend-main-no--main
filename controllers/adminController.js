@@ -6,6 +6,7 @@ const adminController = {
   getAllAdmins: async (req, res) => {
     try {
       const admins = await Admin.findAll();
+      console.log(result)
       res.status(200).json(admins);
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
@@ -17,6 +18,7 @@ const adminController = {
     try {
       const [result] = await sequelize.query('SELECT COUNT(*) AS totalBiddings FROM biddings');
       const { totalBiddings } = result[0];
+      console.log(result)
       res.status(200).json({ totalBiddings });
     } catch (error) {
       res.status(500).json({ error: 'Internal Server Error' });
